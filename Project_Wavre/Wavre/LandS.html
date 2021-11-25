@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="alert2">
+        <?php
+                       if(isset($_GET['login_err']))
+                       {
+                          $err = htmlspecialchars($_GET['login_err']);
+  
+                          switch($err)
+                          {
+                             case 'password':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> mot de passe incorrect
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'email':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> email incorrect
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'already':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> ce compte n'existe pas encore
+                                </div>
+                             <?php
+                             break;
+                          }
+                       }
+                    ?>
+              </div>
+              <div class="alert2">
+                 <?php
+                       if(isset($_GET['reg_err']))
+                       {
+                          $err2 = htmlspecialchars($_GET['reg_err']);
+  
+                          switch($err2)
+                          {
+                             case 'success':
+                                ?>
+                                <div class="alert alert-success" role="alert">
+                                   <strong>Succès</strong> inscription réussi !
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'password2':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> mots de passes différents
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'email2':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> email non valide
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'email_length':
+                                ?>
+                                <div class="alert alert-success" role="alert">
+                                   <strong>Erreur</strong> email trop long
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'pseudo_length':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> pseudo trop long
+                                </div>
+                             <?php
+                             break;
+  
+                             case 'already2':
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                   <strong>Erreur</strong> compte deja existant
+                                </div>
+                             <?php
+                          }
+                       }
+                    ?>
+                    </div>
+              <!--login-->
+              
+              <form action="connexion.php" method="post"  class="login">
+                <div class="field">
+                   <input type="email" placeholder="Email" name="email"  required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="pass-link">
+                   <a href="#">J'ai oublié mot de passe ?</a>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="Se connecter">
+                </div>
+                <div class="signup-link">
+                   Pas encore inscrit ? <a href="">S'inscrire</a>
+                </div>
+             </form>
+             <!--signup-->
+
+             <form action="inscription_traitement.php" method="post" class="signup">
+                <div class="field">
+                    <input type="text" name="prenom" placeholder="Prénom" required>
+                 </div>
+                <div class="field">
+                   <input type="text" name="nom" placeholder="Nom" required>
+                </div>
+                <div class="field">
+                   <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                   <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                   <input type="password" name="cpassword" placeholder="Confirm password" required>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="S'inscrire">
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+    <button><a href="index.html">HOME</a></button>
+</body>
+</html>

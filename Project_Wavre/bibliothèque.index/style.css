@@ -1,0 +1,150 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 10; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  form {
+    background-color: #ffffff;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    border: black solid 1px;
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  h1{
+      height: auto;
+      width: auto;
+      margin-left: 75px;
+  }
+.log{
+    border: black solid 5px;
+}
+.btn1{
+    height: 25px;
+    width: 80px;
+    margin-left: 230px;
+    margin-top: -15px;
+    margin-bottom: 50px;
+
+}
+#pic{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#suite{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#tl
+{
+    text-decoration: none;
+    color: black;
+}
+#ig{
+    margin-left: 10px;
+    align-content: center;
+}
+#bo{
+  height: 25px;
+  width: 100px;
+  margin-left: 0px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+#form{
+  position: absolute;
+
+}
+#input{
+  height: 75px;
+  width: 330px;
+}
+#nodeco{
+  text-decoration: none;
+  color: #ffff;
+}
+.b1{
+  height: 40px;
+  width: 75px;
+
+}
+.b2{
+  height: 40px;
+  width: 75px;
+}
+.b3{
+  height: 40px;
+  width: 75px;
+  margin-left: 28%;
+  margin-bottom: -15%;
+}
+#CT{
+  margin-right: 10%;
+}
+@media (min-width:375px) and (max-width:812px){}
+@media (min-width:780px) and (max-width:979px){}
+.pc{
+  margin-top: 60%;
+
+}
+#nog{
+  text-decoration: none;
+  color: #ffff;
+}
+#lv{
+  height: 150px;
+  width: 100px;
+}
